@@ -29,7 +29,7 @@ export const ConnectToFriendModal: React.FC<ConnectToFriendModalProps> = ({
   const [friendAddress, setFriendAddress] = useState("");
   const [bet, setBet] = useState(0);
 
-  const { connectToFriend, isLoading, isSuccess } = useConnectToFriend(
+  const { connectToFriend, isLoading } = useConnectToFriend(
     friendAddress as `0x${string}`,
     bet
   );
@@ -38,10 +38,8 @@ export const ConnectToFriendModal: React.FC<ConnectToFriendModalProps> = ({
 
   const handleConfirm = async () => {
     await connectToFriend?.();
-    if (isSuccess) {
-      onClose();
-      navigate(`${routes.Round.Main}/${friendAddress}`);
-    }
+    onClose();
+    navigate(`${routes.Round.Main}/${friendAddress}`);
   };
 
   useEffect(() => {

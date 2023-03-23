@@ -24,6 +24,7 @@ export const useMakeMove = ({
     args: [address, round, melee, range, siege],
     overrides: {
       gasPrice: BigNumber.from(1000000000),
+      gasLimit: BigNumber.from(1000000000),
     },
   });
   const { writeAsync: makeMove, ...params } = useContractWrite(config);

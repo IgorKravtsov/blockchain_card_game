@@ -5,8 +5,7 @@ import { useAuth } from "src/shared";
 import { WEB3_ADDRESS } from "src/shared/constants/WEB3_ADDRESS";
 
 export const useCreateRoom = (initialBalance: number, bet: number) => {
-  const { address } = useAuth();
-  const { config, error } = usePrepareContractWrite({
+  const { config } = usePrepareContractWrite({
     address: WEB3_ADDRESS,
     abi: [
       {
@@ -236,6 +235,8 @@ export const useCreateRoom = (initialBalance: number, bet: number) => {
     functionName: "createRoom",
     overrides: {
       value: bet,
+      gasPrice: BigNumber.from(1000000000),
+      gasLimit: BigNumber.from(1000000000),
     },
   });
   const { writeAsync: createRoom, ...params } = useContractWrite(config);

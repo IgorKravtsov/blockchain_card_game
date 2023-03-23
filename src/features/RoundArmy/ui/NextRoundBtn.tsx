@@ -38,8 +38,8 @@ export const NextRoundBtn: React.FC<NextRoundBtnProps> = ({
   const isLastRound = roundNumber === 3;
 
   const handleClick = async () => {
+    await makeMove?.();
     if (!isLastRound) {
-      await makeMove?.();
       dispatch(roundArmyActions.nextRound());
       dispatch(roundArmyActions.resetArmy());
     } else {

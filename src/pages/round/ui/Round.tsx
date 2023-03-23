@@ -70,7 +70,7 @@ const Round: React.FC = () => {
         <CardsToChoose />
         <YourArmy className={"mt-10"} />
         <NextRoundBtn
-          address={address as `0x${string}`}
+          address={friendAddress as `0x${string}`}
           onFinish={() => setOpenResultModal(true)}
         />
         <ResultsModal

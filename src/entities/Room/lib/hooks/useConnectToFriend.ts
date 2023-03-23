@@ -1,6 +1,7 @@
 import { useContractWrite, usePrepareContractWrite } from "wagmi";
 
 import { WEB3_ABI, WEB3_ADDRESS } from "src/shared/constants/WEB3_ADDRESS";
+import { BigNumber } from "ethers";
 
 //address - address of creator of room
 export const useConnectToFriend = (address: `0x${string}`, bet: number) => {
@@ -10,6 +11,8 @@ export const useConnectToFriend = (address: `0x${string}`, bet: number) => {
     args: [address],
     overrides: {
       value: bet,
+      gasPrice: BigNumber.from(1000000000),
+      gasLimit: BigNumber.from(1000000000),
     },
     functionName: "joinRoom",
   });
