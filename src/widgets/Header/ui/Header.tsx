@@ -63,8 +63,12 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <Navbar className="mx-auto max-w-screen-lg py-2 px-4 lg:px-8 lg:py-4 my-2">
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
-        <Typography as="a" variant="small" className="mr-4 py-1.5 font-normal">
-          <span>Blockchain game</span>
+        <Typography
+          as="a"
+          variant="small"
+          className="mr-4 py-1.5 font-normal cursor-pointer"
+        >
+          <Link to={routes.Home}>Blockchain game</Link>
         </Typography>
         <div className="hidden lg:block">{navList}</div>
         <Button

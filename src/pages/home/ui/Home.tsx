@@ -26,6 +26,7 @@ const Home: React.FC = () => {
   return (
     <Container className={"mt-10"}>
       {/*<RoomList rooms={rooms} className={"mt-10"} />*/}
+      <h1 className={"font-bold text-3xl"}>Best blockchain card game!</h1>
     </Container>
   );
 };
