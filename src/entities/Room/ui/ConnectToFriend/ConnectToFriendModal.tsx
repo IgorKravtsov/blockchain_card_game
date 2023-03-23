@@ -36,8 +36,8 @@ export const ConnectToFriendModal: React.FC<ConnectToFriendModalProps> = ({
 
   const navigate = useNavigate();
 
-  const handleConfirm = () => {
-    connectToFriend?.();
+  const handleConfirm = async () => {
+    await connectToFriend?.();
     if (isSuccess) {
       onClose();
       navigate(`${routes.Round.Main}/${friendAddress}`);

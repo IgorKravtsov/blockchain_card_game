@@ -14,8 +14,10 @@ export const AddressWatcher: React.FC<AddressWatcherProps> = ({
   const { data, refetch } = useGetRoom(address as `0x${string}`);
 
   useEffect(() => {
-    if (BigNumber.isBigNumber(data)) {
-      setBet(data.toNumber());
+    console.log(data);
+    const data1 = data as any;
+    if (BigNumber.isBigNumber(data1?.bet)) {
+      setBet(data1?.bet.toNumber());
     }
   }, [data, setBet]);
 

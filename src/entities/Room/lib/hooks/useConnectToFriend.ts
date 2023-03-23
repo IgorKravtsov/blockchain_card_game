@@ -13,7 +13,7 @@ export const useConnectToFriend = (address: `0x${string}`, bet: number) => {
     },
     functionName: "joinRoom",
   });
-  const { write: connectToFriend, ...params } = useContractWrite(config);
+  const { writeAsync: connectToFriend, ...params } = useContractWrite(config);
 
   return { connectToFriend, ...params };
 };
