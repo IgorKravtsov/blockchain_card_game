@@ -11,7 +11,7 @@ export const useConnectToFriend = (address: `0x${string}`, bet: number) => {
     args: [address],
     overrides: {
       value: bet,
-      gasPrice: BigNumber.from(10000000000),
+      gasLimit: BigNumber.from(1_000_000),
     },
     functionName: "joinRoom",
   });
