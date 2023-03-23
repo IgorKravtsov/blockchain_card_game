@@ -235,8 +235,7 @@ export const useCreateRoom = (initialBalance: number, bet: number) => {
     functionName: "createRoom",
     overrides: {
       value: bet,
-      gasPrice: BigNumber.from(1000000000),
-      gasLimit: BigNumber.from(1000000000),
+      gasPrice: BigNumber.from(10000000000),
     },
   });
   const { writeAsync: createRoom, ...params } = useContractWrite(config);
