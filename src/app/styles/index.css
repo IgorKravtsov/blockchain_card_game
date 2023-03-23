@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.melee_card {
+    background-image: url("https://cdna.artstation.com/p/assets/images/images/007/333/488/large/bartlomiej-gawel-ancraite-greatswords.jpg?1505400090");
+}
+
+.ranged_card {
+    background-image: url("https://cdna.artstation.com/p/assets/images/images/008/832/668/medium/grafit-studio-brokvar-archer.jpg?1515587555");
+}
+
+.siege_card {
+    background-image: url("http://custom-gwent.com/cardsBg/1ec5cccf99848bad98d21dbaa59917f2.jpeg");
+}
