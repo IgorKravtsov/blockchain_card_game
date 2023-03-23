@@ -17,7 +17,7 @@ export const ConnectToFriendForm: React.FC<CreateRoomFormProps> = ({
 
   return (
     <form className={"mt-4"}>
-      <Input label="Link" onChange={handleChange} value={value} required />
+      <Input label="Address" onChange={handleChange} value={value} required />
     </form>
   );
 };
