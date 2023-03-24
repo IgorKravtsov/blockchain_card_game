@@ -1,7 +1,6 @@
 import React from "react";
-import { RoomList } from "src/entities/Room";
 import { IRoom } from "src/shared/types/room.interface";
-import { Container } from "src/shared/ui/Container/Container";
+import { CenterScreenContainer } from "src/shared/ui/Container/CenterScreenContainer";
 
 const rooms: Omit<IRoom, "rounds">[] = [
   {
@@ -24,10 +23,12 @@ const rooms: Omit<IRoom, "rounds">[] = [
 
 const Home: React.FC = () => {
   return (
-    <Container className={"mt-10"}>
+    <CenterScreenContainer className={"mt-10"}>
       {/*<RoomList rooms={rooms} className={"mt-10"} />*/}
-      <h1 className={"font-bold text-3xl"}>Best blockchain card game!</h1>
-    </Container>
+      <h1 className={"font-bold text-3xl text-center text-deep-purple-700"}>
+        Best blockchain card game!
+      </h1>
+    </CenterScreenContainer>
   );
 };
 

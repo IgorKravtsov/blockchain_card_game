@@ -51,7 +51,6 @@ const Round: React.FC = () => {
       console.log("===friendAddress===", friendAddress);
       const firstValues =
         address === friendAddress ? data1?.playerBalance : data1?.ownerBalance;
-      // dispatch(roundArmyActions.setFirstValues(firstValues));
       dispatch(roundArmyActions.setFirstValues(firstValues?.toNumber()));
     }
   }, [dispatch, roundNumber, data, address, friendAddress]);
